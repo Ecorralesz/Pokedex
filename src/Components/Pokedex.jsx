@@ -5,7 +5,6 @@ import axios from "axios";
 import PokemonCard from "./PokemonCard";
 import { useNavigate } from "react-router-dom";
 
-
 //''
 
 const Pokedex = () => {
@@ -53,13 +52,19 @@ const Pokedex = () => {
   }
 
   return (
-    <div className="pokedex-main-container"> 
+    <div className="pokedex-main-container">
+      <div className="wrapper-2">
+        <div className="pokeball-spinner"></div>
+      </div>
+      <div className="wrapper-3">
+        <div className="pokeball-spinner"></div>
+      </div>
       <div className="pokedex-header">
-      <h1>Pokedex</h1>
-      <p>
-        {" "}
-        Welcome: <b>{name}</b>
-      </p>
+        <h1>Pokedex</h1>
+        <p>
+          {" "}
+          Welcome: <b>{name}</b>
+        </p>
       </div>
 
       <div className="pokedex-btn-cont">
@@ -86,30 +91,30 @@ const Pokedex = () => {
 
       <div className="pokedex-btn-cont-2">
         <div>
-        <input
-          type="text"
-          placeholder="Look for a Pokemon"
-          value={nameInput}
-          onChange={(e) => setNameInput(e.target.value)}
-        />
-        <button onClick={searchName}>Search</button>
+          <input
+            type="text"
+            placeholder="Look for a Pokemon"
+            value={nameInput}
+            onChange={(e) => setNameInput(e.target.value)}
+          />
+          <button onClick={searchName}>Search</button>
         </div>
         <div>
-        <select onChange={(e) => searchPokemon(e.target.value)}>
-          <option value="">Select a pokemon type</option>
-          {typesList.map((type) => (
-            <option value={type.url} key={type.url}>
-              {type.name}
-            </option>
-          ))}
-        </select>
+          <select onChange={(e) => searchPokemon(e.target.value)}>
+            <option value="">Select a pokemon type</option>
+            {typesList.map((type) => (
+              <option value={type.url} key={type.url}>
+                {type.name}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
-      
+
       <div className="pokedex-grid-container">
-      {pokemonsPaginated.map((pokemon) => (
-        <PokemonCard url={pokemon.url} key={pokemon.url} />
-      ))}
+        {pokemonsPaginated.map((pokemon) => (
+          <PokemonCard url={pokemon.url} key={pokemon.url} />
+        ))}
       </div>
     </div>
   );
