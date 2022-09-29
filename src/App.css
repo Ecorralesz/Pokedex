@@ -58,16 +58,22 @@ body {
   height: 100vh;
 }
 
-.main-page-cont  {
+.name-container h2 {
+  font-family: Clasic;
+  font-size: 3rem;
+}
+
+.name-container p {
   font-family: Clasic;
   font-size: 2rem;
 }
 
-.main-page-cont h1 {
+.name-container h1 {
   font-family: Pokemon-hollow;
   font-size: 15rem;
   margin: 0;
 }
+
 
 .main-page-cont h2 {
   margin: 0;
