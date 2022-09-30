@@ -29,7 +29,7 @@ const UserInput = () => {
             onChange={(e) => setUserName(e.target.value)}
           />
           <button onClick={dispatchUsername}>
-             Send <i class="fa-solid fa-arrow-right-to-bracket"></i>
+             Send <i className="fa-solid fa-arrow-right-to-bracket"></i>
           </button>
         </div>
         <div className="lines-cont">

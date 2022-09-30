@@ -6,12 +6,24 @@ const PokemonDetail = () => {
   const { id } = useParams();
   const [pokemon, setPokemon] = useState({});
   const navigate = useNavigate();
+  const [ pokemonMoves, setPokemonMoves ] = useState([])
+
+
+  console.log(pokemonMoves)
+
 
   useEffect(() => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((res) => setPokemon(res.data));
+
+    axios
+      .get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then((res) => {
+        setPokemonMoves(res.data.moves.map((move) => move.move.name))
+      });
   }, []);
+
 
   return (
     <div className="pokemon-detail-cont">
@@ -33,6 +45,21 @@ const PokemonDetail = () => {
         <p>Weight: {pokemon.weight}</p>
         <button onClick={() => navigate(-1)}>Return</button>
         </div>
+        <hr/>
+        <h3 className="title">Abilities</h3>
+        <div className="moves-container">
+        <p>{pokemon.abilities?.[0].ability.name}</p>
+        <p>{pokemon.abilities?.[1].ability.name}</p>
+        </div>
+        <hr />
+        <h3 className="title">Moves</h3>
+        <div className="pokedex-btn-pages">
+        {pokemonMoves.map((move) => (
+          <button>
+            {move}
+          </button>
+        ))}
+      </div>
         </div>
       </div>
     </div>
