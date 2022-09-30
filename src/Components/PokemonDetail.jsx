@@ -53,7 +53,7 @@ const PokemonDetail = () => {
         </div>
         <hr />
         <h3 className="title">Moves</h3>
-        <div className="pokedex-btn-pages">
+        <div className="pokemon-moves">
         {pokemonMoves.map((move) => (
           <button>
             {move}

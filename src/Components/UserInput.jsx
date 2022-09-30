@@ -12,11 +12,14 @@ const UserInput = () => {
     dispatch(changeName(userName));
     navigate("/pokedex");
   };
-  
+
   const navigate = useNavigate();
 
   return (
     <div className="main-page-cont">
+        <div class="pokeball">
+          <div class="pokeball__button"></div>
+        </div>
       <div className="name-container">
         <h1>POKEDEX</h1>
         <h2>Hello Trainer!</h2>
@@ -29,7 +32,7 @@ const UserInput = () => {
             onChange={(e) => setUserName(e.target.value)}
           />
           <button onClick={dispatchUsername}>
-             Send <i className="fa-solid fa-arrow-right-to-bracket"></i>
+            Send <i className="fa-solid fa-arrow-right-to-bracket"></i>
           </button>
         </div>
         <div className="lines-cont">
@@ -37,8 +40,8 @@ const UserInput = () => {
           <div className="second-line"></div>
         </div>
         <div className="wrapper">
-      <div className="pokeball-spinner"></div>
-      </div>
+          <div className="pokeball-spinner"></div>
+        </div>
       </div>
     </div>
   );
