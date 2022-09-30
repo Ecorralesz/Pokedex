@@ -9,7 +9,7 @@ const PokemonDetail = () => {
   const [ pokemonMoves, setPokemonMoves ] = useState([])
 
 
-  console.log(pokemonMoves)
+ 
 
 
   useEffect(() => {
@@ -43,7 +43,14 @@ const PokemonDetail = () => {
         <p>Defense: {pokemon.stats?.[2].base_stat}</p>
         <p>Height: {pokemon.height}</p>
         <p>Weight: {pokemon.weight}</p>
-        <button onClick={() => navigate(-1)}>Return</button>
+        <div className="pokeball-smaller">
+        <div 
+        className="pokeball"
+        onClick={() => navigate(-1)}
+        >
+        <div className="pokeball__button"></div>
+      </div>
+        </div>
         </div>
         <hr/>
         <h3 className="title">Abilities</h3>
@@ -55,7 +62,7 @@ const PokemonDetail = () => {
         <h3 className="title">Moves</h3>
         <div className="pokemon-moves">
         {pokemonMoves.map((move) => (
-          <button>
+          <button key={move}>
             {move}
           </button>
         ))}

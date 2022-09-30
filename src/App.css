@@ -66,6 +66,10 @@ select {
   height: 100vh;
 }
 
+.totodile {
+  position: absolute;
+  right: 20%;
+}
 .name-container h2 {
   font-family: Clasic;
   font-size: 3rem;
@@ -289,7 +293,7 @@ select {
 .wrapper-3 {
   position: absolute;
   top: 10%;
-  right: 27%;
+  right: 25%;
 
   transform: translate( -50%);
   margin-bottom: 20px;
@@ -311,6 +315,11 @@ select {
 .pokedex-header p {
   font-family: Clasic;
   font-size: 2rem;
+}
+
+.pokedex-header img {
+  width: 400px;
+  margin-top: 10px;
 }
 
 .pokedex-header b {
@@ -415,10 +424,12 @@ select {
   align-items: center;
   text-transform: uppercase;
   font-family: Clasic;
-  padding: 100px;
+  padding: 20px;
   border-radius: 15px;
   border: solid 2px var(--main);
 }
+
+
 
 .pokemon-card-stats {
   display: grid;
@@ -469,6 +480,11 @@ select {
   padding: 10px;
 }
 
+.pokeball-smaller { 
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
 
 .pokemon-detail-card-img {
   background: var(--bg);
@@ -534,3 +550,4 @@ select {
   text-transform: uppercase;
   background: var(--text);
 }
+

@@ -17,9 +17,9 @@ const UserInput = () => {
 
   return (
     <div className="main-page-cont">
-        <div class="pokeball">
-          <div class="pokeball__button"></div>
-        </div>
+      <div className="pokeball">
+        <div className="pokeball__button"></div>
+      </div>
       <div className="name-container">
         <h1>POKEDEX</h1>
         <h2>Hello Trainer!</h2>
@@ -43,6 +43,7 @@ const UserInput = () => {
           <div className="pokeball-spinner"></div>
         </div>
       </div>
+      <img src="https://www.freeiconspng.com/uploads/totodile-pokemon-png-5.png" width="350" alt="totodile pokemon png" className="totodile"/>
     </div>
   );
 };
