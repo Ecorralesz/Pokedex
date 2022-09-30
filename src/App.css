@@ -12,16 +12,16 @@
 }
 @font-face {
   font-family: Pokemon;
-  src: url('/src/fonts/Pokemon\ Solid.ttf');
+  src: url('/src/fonts/Pokemon_Classic.ttf');
 }
 
 @font-face {
   font-family: Pokemon-hollow;
-  src: url('/src/fonts/Pokemon\ Hollow.ttf');
+  src: url('/src/fonts/Pokemon_Hollow.ttf');
 }
 @font-face {
   font-family: Clasic;
-  src: url('/src/fonts/Pokemon\ Classic.ttf');
+  src: url('/src/fonts/Pokemon_Classic.ttf');
 }
 
 
