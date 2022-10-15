@@ -21,17 +21,18 @@ const UserInput = () => {
         <div className="pokeball__button"></div>
       </div>
       <div className="name-container">
-        <h1>POKEDEX</h1>
-        <h2>Hello Trainer!</h2>
-        <p>Give me your name to start</p>
+        <h1 className="tracking-in-expand">POKEDEX</h1>
+        <h2 className="tracking-in-expand">Hello Trainer!</h2>
+        <p className="tracking-in-expand">Give me your name to start</p>
         <div className="input-container">
           <input
             placeholder="Type your name here!"
             type="text"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
+            className="shadow-pop-tr"
           />
-          <button onClick={dispatchUsername}>
+          <button onClick={dispatchUsername} className="shadow-pop-tr">
             Send <i className="fa-solid fa-arrow-right-to-bracket"></i>
           </button>
         </div>
@@ -39,11 +40,8 @@ const UserInput = () => {
           <div className="first-line"></div>
           <div className="second-line"></div>
         </div>
-        <div className="wrapper">
-          <div className="pokeball-spinner"></div>
-        </div>
+      
       </div>
-      <img src="https://www.freeiconspng.com/uploads/totodile-pokemon-png-5.png" width="350" alt="totodile pokemon png" className="totodile"/>
     </div>
   );
 };

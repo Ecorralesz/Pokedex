@@ -52,22 +52,45 @@ const Pokedex = () => {
   }
 
   return (
-    <div className="pokedex-main-container">
-      <div className="wrapper-2">
-        <div className="pokeball-spinner"></div>
-      </div>
-      <div className="wrapper-3">
-        <div className="pokeball-spinner"></div>
-      </div>
-      <div className="pokedex-header">
+    <div 
+    className="pokedex-main-container"
+    >
+      <div 
+      className="pokedex-header"
+      >
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2000px-International_Pok%C3%A9mon_logo.svg.png"
         alt="Pokemon"
+        className="tracking-in-expand"
+        onClick={() => navigate('/')}
       ></img>
-        <p>
+        <p className="tracking-in-expand">
           {" "}
           Welcome: <b>{name}</b>
         </p>
+      </div>
+
+      <div className="pokedex-btn-cont-2">
+        <div>
+          <input
+            type="text"
+            placeholder="Look for a Pokemon by Name"
+            value={nameInput}
+            onChange={(e) => setNameInput(e.target.value)}
+            className="shadow-pop-tr"
+          />
+          <button onClick={searchName} className="shadow-pop-tr">Search</button>
+        </div>
+        <div>
+          <select onChange={(e) => searchPokemon(e.target.value)} className="shadow-pop-tr">
+            <option value="">Select a pokemon type</option>
+            {typesList.map((type) => (
+              <option value={type.url} key={type.url}>
+                {type.name}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
       <div className="pokedex-btn-cont">
@@ -82,43 +105,28 @@ const Pokedex = () => {
             Next Page
           </button>
         </div>
+        <br />
       </div>
 
       <div className="pokedex-btn-pages">
         {pageNumbers.map((number) => (
-          <button onClick={() => setPage(number)} key={number}>
+          <button onClick={() => setPage(number)} key={number} className="rotate-center shadow-pop-tr">
             {number}
           </button>
         ))}
       </div>
 
-      <div className="pokedex-btn-cont-2">
-        <div>
-          <input
-            type="text"
-            placeholder="Look for a Pokemon"
-            value={nameInput}
-            onChange={(e) => setNameInput(e.target.value)}
-          />
-          <button onClick={searchName}>Search</button>
-        </div>
-        <div>
-          <select onChange={(e) => searchPokemon(e.target.value)}>
-            <option value="">Select a pokemon type</option>
-            {typesList.map((type) => (
-              <option value={type.url} key={type.url}>
-                {type.name}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
 
       <div className="pokedex-grid-container">
         {pokemonsPaginated.map((pokemon) => (
           <PokemonCard url={pokemon.url} key={pokemon.url} />
         ))}
       </div>
+
+      <div className="lines-cont">
+          <div className="first-line"></div>
+          <div className="second-line"></div>
+        </div>
     </div>
   );
 };
