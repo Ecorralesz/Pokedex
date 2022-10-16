@@ -735,6 +735,11 @@ select {
   .pokedex-grid-container {
     grid-template-columns: repeat(1,1fr);
   }
+
+  .pokemon-detail-cont {
+    grid-template-columns: repeat(1,1fr);
+    width: fit-content;
+  }
   
   .pokeball {
     display: none;
