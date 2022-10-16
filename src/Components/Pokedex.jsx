@@ -71,7 +71,7 @@ const Pokedex = () => {
       </div>
 
       <div className="pokedex-btn-cont-2">
-        <div>
+        <div className="input-userLogin">
           <input
             type="text"
             placeholder="Look for a Pokemon by Name"
@@ -81,7 +81,8 @@ const Pokedex = () => {
           />
           <button onClick={searchName} className="shadow-pop-tr">Search</button>
         </div>
-        <div>
+        <br />
+        <div style={{marginTop: "5%"}}>
           <select onChange={(e) => searchPokemon(e.target.value)} className="shadow-pop-tr">
             <option value="">Select a pokemon type</option>
             {typesList.map((type) => (
@@ -93,8 +94,14 @@ const Pokedex = () => {
         </div>
       </div>
 
+      <div className="pokedex-grid-container">
+        {pokemonsPaginated.map((pokemon) => (
+          <PokemonCard url={pokemon.url} key={pokemon.url} />
+        ))}
+      </div>
+
       <div className="pokedex-btn-cont">
-        <div>
+        <div style={{marginBottom: "20px"}}>
           <button onClick={() => setPage(page - 1)} disabled={page === 1}>
             Prev Page
           </button>
@@ -116,17 +123,11 @@ const Pokedex = () => {
         ))}
       </div>
 
-
-      <div className="pokedex-grid-container">
-        {pokemonsPaginated.map((pokemon) => (
-          <PokemonCard url={pokemon.url} key={pokemon.url} />
-        ))}
-      </div>
-
+{/* 
       <div className="lines-cont">
           <div className="first-line"></div>
           <div className="second-line"></div>
-        </div>
+        </div> */}
     </div>
   );
 };

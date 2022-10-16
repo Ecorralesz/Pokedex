@@ -74,7 +74,7 @@ const PokemonDetail = () => {
               </span>
             ))}
           </div>
-          <div className="pokemon-card-stats puff-in-br" style={{ marginTop: "30px" }}>
+          <div className="pokemon-card-stats-1 puff-in-br" style={{ marginTop: "30px" }}>
             <h2># {pokemon.id}</h2>
             <p>Hp: {pokemon.stats?.[0].base_stat}</p>
             <p>Height: {pokemon.height}</p>

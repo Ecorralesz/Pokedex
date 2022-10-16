@@ -44,7 +44,7 @@ const UserInput = () => {
             className="shadow-pop-tr"
           />
           <button onClick={dispatchUsername} className="shadow-pop-tr">
-            Send <i className="fa-solid fa-arrow-right-to-bracket"></i>
+            Let's GO! <i className="fa-solid fa-arrow-right-to-bracket"></i>
           </button>
         </div>
         <div className="lines-cont">
