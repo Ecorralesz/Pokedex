@@ -55,6 +55,9 @@ select {
 }
 
 
+.loading {
+  background-image: url(./assets/n1582649.gif);
+}
 
 /* UserInput styles  */
 
@@ -548,7 +551,7 @@ select {
 .pokeball-smaller { 
   position: absolute;
   top: 5%;
-  right: 33%;
+  right: 0;
 }
 
 .pokemon-detail-card-img {
@@ -657,6 +660,7 @@ select {
   background: var(--white);
   border-radius: 15px;
   padding: 20px;
+  padding-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 15px;
@@ -679,10 +683,70 @@ select {
   background: var(--white) !important;
 }
 
+@media (max-width:480px){
+
+  html {
+    width: fit-content;
+  }
+
+  .main-page-cont h1 {
+    color: red;
+    font-size: 100px;
+  }
+
+  .main-page-cont h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .main-page-cont p {
+    display: none;
+  }
+
+  .pokedex-btn-pages {
+    display: none;
+  }
+
+  .main-page-cont {
+    height: 100%;
+    background: url(./assets/wallpaperflare.com_wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 70%;
+  }
+
+  .name-container {
+    padding: 60%;
+    
+  }
+
+  .pokedex-header img{
+    width: 300px;
+
+  }
+
+  .pokedex-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pokedex-grid-container {
+    grid-template-columns: repeat(1,1fr);
+  }
+  
+  .pokeball {
+    display: none;
+}
+
+@media (max-width:960px){
+
+  }
 
 
 @media (min-width:1025px){
-
+  
 
 
   .name-container h1 {
@@ -973,4 +1037,5 @@ select {
 }
 
 
+}
 }

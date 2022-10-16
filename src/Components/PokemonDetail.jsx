@@ -18,8 +18,9 @@ const PokemonDetail = () => {
       .then((res) => setPokemon(res.data))
       .finally(() => dispatch(setIsLoading(false)));
 
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then((res) => {
-      setPokemonMoves(res.data.moves.map((move) => move.move.name));
+    axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+    .then((res) => {setPokemonMoves(res.data.moves.map((move) => move.move.name))
+
     });
   }, []);
 
@@ -128,7 +129,9 @@ const PokemonDetail = () => {
         </div>
       </div>
       <div className="pokemon-detail-card-details">
-        <div className="pokeball-smaller">
+        <div 
+        className="pokeball-smaller"
+        >
           <div className="pokeball" onClick={() => navigate(-1)}>
             <div 
             className="pokeball__button" 
@@ -136,7 +139,9 @@ const PokemonDetail = () => {
             >GO BACK</div>
           </div>
         </div>
-        <h3 className="puff-in-br stats">Moves</h3>
+        <h3 
+        className="puff-in-br stats"
+        >Moves</h3>
         <div 
         className="pokemon-moves tracking-in-expand-fwd"
         >

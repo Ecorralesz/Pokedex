@@ -17,9 +17,20 @@ const UserInput = () => {
 
   return (
     <div className="main-page-cont">
-      <div className="pokeball">
-        <div className="pokeball__button"></div>
-      </div>
+        <div 
+        className="pokeball-smaller"
+        style={{
+          bottom: "50px",
+          right: "150px"
+        }}
+        >
+          <div className="pokeball">
+            <div 
+            className="pokeball__button" 
+            style={{fontFamily: "Arcade", fontSize: "10px", color: "black"}}
+            ></div>
+          </div>
+          </div>
       <div className="name-container">
         <h1 className="tracking-in-expand">POKEDEX</h1>
         <h2 className="tracking-in-expand">Hello Trainer!</h2>
