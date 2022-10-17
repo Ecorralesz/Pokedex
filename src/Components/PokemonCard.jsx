@@ -26,7 +26,7 @@ const PokemonCard = ({ url }) => {
     rock: "brown",
     ghost: "black",
     steel: "lightgray",
-    electric: "yellow",
+    electric: "orange",
     psychic: "purple",
     ice: "lightblue",
     dragon: "gold",

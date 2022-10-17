@@ -82,7 +82,7 @@ const Pokedex = () => {
           <button onClick={searchName} className="shadow-pop-tr">Search</button>
         </div>
         <br />
-        <div style={{marginTop: "5%"}}>
+        <div >
           <select onChange={(e) => searchPokemon(e.target.value)} className="shadow-pop-tr">
             <option value="">Select a pokemon type</option>
             {typesList.map((type) => (
