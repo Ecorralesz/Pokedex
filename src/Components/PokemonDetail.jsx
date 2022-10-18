@@ -62,6 +62,7 @@ const PokemonDetail = () => {
           ></div>
           <h3 className="puff-in-br">{pokemon.name}</h3>
           <img className="jello-vertical" src={pokemon.sprites?.other.dream_world.front_default} />
+          <div style={{marginTop: "5%"}}>
           <h5 className="puff-in-br"> Type: </h5>
           <div className="types-flex">
             {pokemon.types?.map((type) => (
@@ -73,6 +74,8 @@ const PokemonDetail = () => {
                 {type.type.name} <br />
               </span>
             ))}
+          </div>
+
           </div>
           <div className="pokemon-card-stats-1 puff-in-br" style={{ marginTop: "30px" }}>
             <h2># {pokemon.id}</h2>
